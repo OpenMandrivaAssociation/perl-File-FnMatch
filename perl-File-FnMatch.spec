@@ -1,7 +1,7 @@
 %define module File-FnMatch
 %define name perl-%{module}
 %define version	0.02
-%define release	%mkrel 1
+%define release	%mkrel 2
 
 Name:		%{name}
 Version:	%{version}
@@ -27,6 +27,8 @@ are nonetheless useful and familiar to a large audience of end-users.
 %{__perl} Makefile.PL INSTALLDIRS=vendor <<EOF
 EOF
 %make
+
+%check
 %make test
 
 %install
