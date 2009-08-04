@@ -1,18 +1,18 @@
-%define module File-FnMatch
-%define name perl-%{module}
-%define version	0.02
-%define release	%mkrel 5
+%define upstream_name    File-FnMatch
+%define upstream_version 0.02
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:	Simple filename and pathname matching
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-Source:		http://search.cpan.org//CPAN/authors/id/M/MJ/MJP/File-FnMatch-0.02.tar.gz
-Url:		http://search.cpan.org/~mjp/%{module}-%{version}/FnMatch.pm
-BuildRoot:	%{_tmppath}/%{name}-buildroot/
+Url:		http://search.cpan.org/~mjp/%{upstream_name}-%{upstream_version}/FnMatch.pm
+Source0:	http://search.cpan.org//CPAN/authors/id/M/MJ/MJP/File-FnMatch-0.02.tar.gz
+
 BuildRequires:	perl-devel
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 File::FnMatch::fnmatch() provides simple, shell-like pattern matching.
@@ -21,7 +21,7 @@ Though considerably less powerful than regular expressions, shell patterns
 are nonetheless useful and familiar to a large audience of end-users.
 
 %prep
-%setup -q -n %{module}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor <<EOF
@@ -43,4 +43,3 @@ rm -rf $RPM_BUILD_ROOT
 %doc Changes README
 %{perl_vendorlib}/*
 %{_mandir}/*/*
-
