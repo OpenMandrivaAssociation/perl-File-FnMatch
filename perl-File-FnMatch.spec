@@ -13,8 +13,6 @@ Source0:	http://search.cpan.org//CPAN/authors/id/M/MJ/MJP/File-FnMatch-0.02.tar.
 
 BuildRequires:	perl-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
-# temporary dep due to the perl-5.14 bump
-BuildRequires:  perl-List-MoreUtils >= 0.320.0-4
 
 %description
 File::FnMatch::fnmatch() provides simple, shell-like pattern matching.
