@@ -1,10 +1,10 @@
-%define upstream_name    File-FnMatch
+%define upstream_name File-FnMatch
 %define upstream_version 0.02
 
 Summary:	Simple filename and pathname matching
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	9
+Release:	10
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/~mjp/%{upstream_name}-%{upstream_version}/FnMatch.pm
