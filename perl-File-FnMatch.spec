@@ -1,15 +1,14 @@
-%define upstream_name File-FnMatch
-%define upstream_version 0.02
+%define modname	File-FnMatch
+%define modver	0.02
 
 Summary:	Simple filename and pathname matching
-Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
+Name:		perl-%{modname}
+Version:	%perl_convert_version %{modver}
 Release:	10
-License:	GPL+ or Artistic
+License:	GPLv2+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/~mjp/%{upstream_name}-%{upstream_version}/FnMatch.pm
+Url:		http://search.cpan.org/~mjp/%{modname}-%{modver}/FnMatch.pm
 Source0:	http://search.cpan.org//CPAN/authors/id/M/MJ/MJP/File-FnMatch-0.02.tar.gz
-
 BuildRequires:	perl-devel
 
 %description
@@ -19,10 +18,10 @@ Though considerably less powerful than regular expressions, shell patterns
 are nonetheless useful and familiar to a large audience of end-users.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -qn %{modname}-%{modver}
 
 %build
-%{__perl} Makefile.PL INSTALLDIRS=vendor <<EOF
+%__perl Makefile.PL INSTALLDIRS=vendor <<EOF
 EOF
 %make
 
@@ -35,5 +34,5 @@ EOF
 %files
 %doc Changes README
 %{perl_vendorlib}/*
-%{_mandir}/*/*
+%{_mandir}/man3/*
 
