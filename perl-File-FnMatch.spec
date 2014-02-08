@@ -4,7 +4,7 @@
 Summary:	Simple filename and pathname matching
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	10
+Release:	11
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/~mjp/%{upstream_name}-%{upstream_version}/FnMatch.pm
