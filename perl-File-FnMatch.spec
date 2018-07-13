@@ -9,6 +9,7 @@ License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/~mjp/%{modname}-%{modver}/FnMatch.pm
 Source0:	http://search.cpan.org//CPAN/authors/id/M/MJ/MJP/File-FnMatch-0.02.tar.gz
+BuildRequires:	perl(Test)
 BuildRequires:	perl-devel
 
 %description
