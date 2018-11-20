@@ -34,6 +34,6 @@ EOF
 
 %files
 %doc Changes README
-%{perl_vendorlib}/*
+%{perl_vendorarch}/*
 %{_mandir}/man3/*
 
